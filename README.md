@@ -39,5 +39,5 @@ The core ZMK driver and shield implementation. It contains:
 
 ## Multi-Keyboard Configuration
 
-For details on multiple keyboard tracking, sticky selection rules, and timeout parameters for quick auto-switching, refer to the local documentation guide:
-[docs/MULTI_KEYBOARD_RULES.md](file:///Users/will/workspace/keyboards/zmk_prospector_scanner/docs/MULTI_KEYBOARD_RULES.md)
+For details on multiple keyboard tracking, sticky selection rules, and timeout parameters for quick auto-switching, refer the documentation guide:
+[docs/MULTI_KEYBOARD_RULES.md](./docs/MULTI_KEYBOARD_RULES.md).
