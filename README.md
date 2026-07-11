@@ -24,7 +24,7 @@ CONFIG_PROSPECTOR_WPM_SUPPORT=n
 # Enable descriptive layer names (centers active name, hides inactive numbers)
 CONFIG_PROSPECTOR_LAYER_NAMES_SUPPORT=y
 
-# Configure BLE profile slot names
+# Show named profiles instead of indexes, its number will be used if not set
 CONFIG_PROSPECTOR_PROFILE_0_NAME="pers"
 CONFIG_PROSPECTOR_PROFILE_1_NAME="work"
 CONFIG_PROSPECTOR_PROFILE_2_NAME="ipad"
