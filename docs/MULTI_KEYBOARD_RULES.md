@@ -2,8 +2,6 @@
 
 This document tracks the rules and expected behaviors for multi-keyboard support on the Prospector Scanner firmware and module.
 
----
-
 ## 🔍 Core Behaviors & Limitations
 
 ### 1. In-Memory Tracking vs. Active Display
@@ -24,8 +22,6 @@ This document tracks the rules and expected behaviors for multi-keyboard support
 * **Non-Touch Mode (`CONFIG_PROSPECTOR_TOUCH_ENABLED=n`):**
   * Touch input and gestures are disabled. The Keyboard List screen is inaccessible.
   * Switching between keyboards is handled **entirely by timeout detection**.
-
----
 
 ## ⚙️ How to Configure Keyboard Switching
 
