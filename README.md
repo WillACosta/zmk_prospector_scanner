@@ -15,7 +15,7 @@ This fork includes several custom enhancements and layout optimizations:
 
 ### UI Configuration Example
 
-To enable your preferred UI style (hiding the WPM widget and displaying descriptive layer names), add the following settings to your `prospector_scanner.conf`:
+To enable your preferred UI style (hiding the WPM widget, displaying descriptive layer names, and naming your BLE profiles), add the following settings to your `prospector_scanner.conf`:
 
 ```conf
 # Disable the WPM widget on screen
@@ -23,6 +23,13 @@ CONFIG_PROSPECTOR_WPM_SUPPORT=n
 
 # Enable descriptive layer names (centers active name, hides inactive numbers)
 CONFIG_PROSPECTOR_LAYER_NAMES_SUPPORT=y
+
+# Configure BLE profile slot names
+CONFIG_PROSPECTOR_PROFILE_0_NAME="pers"
+CONFIG_PROSPECTOR_PROFILE_1_NAME="work"
+CONFIG_PROSPECTOR_PROFILE_2_NAME="ipad"
+CONFIG_PROSPECTOR_PROFILE_3_NAME="mac"
+CONFIG_PROSPECTOR_PROFILE_4_NAME="phone"
 ```
 
 ## Submodule Overview
