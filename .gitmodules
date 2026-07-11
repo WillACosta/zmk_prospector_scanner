@@ -1,0 +1,6 @@
+[submodule "zmk-config-prospector"]
+	path = zmk-config-prospector
+	url = https://github.com/WillACosta/zmk-config-prospector
+[submodule "prospector-zmk-module"]
+	path = prospector-zmk-module
+	url = https://github.com/WillACosta/prospector-zmk-module
