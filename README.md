@@ -44,7 +44,9 @@ The core ZMK driver and shield implementation. It contains:
 * BLE advertising parser (`status_scanner.c`)
 * Screen drawing and layout style definitions (`custom_status_screen.c`, `operator_layout.c`, `radii_layout.c`).
 
-## Multi-Keyboard Configuration
+## Documentation Reference
 
-For details on multiple keyboard tracking, sticky selection rules, and timeout parameters for quick auto-switching, refer the documentation guide:
-[docs/MULTI_KEYBOARD_RULES.md](./docs/MULTI_KEYBOARD_RULES.md).
+For detailed explanations of specific behaviors and configurations, refer to the local guides:
+
+* [docs/MULTI_KEYBOARD_RULES.md](file:///Users/will/workspace/keyboards/zmk_prospector_scanner/docs/MULTI_KEYBOARD_RULES.md) – Covers multiple keyboard tracking, sticky selection, and timeout parameters.
+* [docs/KEYBOARD_NAME_BEHAVIOR.md](file:///Users/will/workspace/keyboards/zmk_prospector_scanner/docs/KEYBOARD_NAME_BEHAVIOR.md) – Explains how configuring the status advertisement name affects BLE host device names.
