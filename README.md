@@ -48,5 +48,5 @@ The core ZMK driver and shield implementation. It contains:
 
 For detailed explanations of specific behaviors and configurations, refer to the local guides:
 
-* [docs/MULTI_KEYBOARD_RULES.md](file:///Users/will/workspace/keyboards/zmk_prospector_scanner/docs/MULTI_KEYBOARD_RULES.md) – Covers multiple keyboard tracking, sticky selection, and timeout parameters.
-* [docs/KEYBOARD_NAME_BEHAVIOR.md](file:///Users/will/workspace/keyboards/zmk_prospector_scanner/docs/KEYBOARD_NAME_BEHAVIOR.md) – Explains how configuring the status advertisement name affects BLE host device names.
+* [docs/MULTI_KEYBOARD_RULES.md](./docs/MULTI_KEYBOARD_RULES.md) – Covers multiple keyboard tracking, sticky selection, and timeout parameters.
+* [docs/KEYBOARD_NAME_BEHAVIOR.md](./docs/KEYBOARD_NAME_BEHAVIOR.md) – Explains how configuring the status advertisement name affects BLE host device names.
