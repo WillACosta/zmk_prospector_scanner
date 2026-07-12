@@ -3,6 +3,8 @@
 > [!NOTE]
 > Work In Progress (WIP): This workspace is currently undergoing active setup, configuration, and testing.
 
+![Prospector Scanner Showcase](./docs/assets/header.png)
+
 Welcome to the unified workspace for the ZMK Prospector Scanner. This monorepo uses Git Submodules to organize the configuration and driver repositories in one place, while maintaining independent upstream tracks.
 
 ## Custom Modifications
