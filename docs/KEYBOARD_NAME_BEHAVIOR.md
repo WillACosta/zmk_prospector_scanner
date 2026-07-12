@@ -36,9 +36,9 @@ Currently, the module code enforces name synchronization. If you want to show a 
 
 ## Behavior when Scanner is Powered Off
 
-Because the status advertisement protocol is entirely unidirectional, the keyboard has no awareness of the scanner's power state.
+Because the status advertisement protocol is entirely unidirectional, the broadcasting peripheral has no awareness of the scanner's power state.
 
-* **Static Device Name:** The keyboard will continue to advertise and pair with host devices under the configured name ("Corne Kbd") even if the Prospector Scanner is turned off or out of range. It does not revert dynamically to its default name ("Eyelash Corne").
-* **Prevention of Sync Issues:** This static behavior is intentional. If the keyboard dynamically toggled its name based on the scanner's presence, host operating systems (which cache Bluetooth name-to-MAC address relationships) would experience pairing confusion, display incorrect names, or fail to reconnect.
-* **Instant Re-synchronization:** When the scanner is powered back on, it automatically begins scanning and captures the keyboard's active advertisement packets (typically within 1 second) to update its UI state immediately.
+* **Static Device Name:** The peripheral continues to advertise and pair with host devices under the configured status advertisement name even if the scanner is powered off or out of range. It does not revert dynamically to its default hardware name.
+* **Prevention of Sync Issues:** This static naming behavior is intentional. If the peripheral dynamically toggled its displayed Bluetooth name based on the scanner's presence, host operating systems (which cache Bluetooth name-to-MAC address mappings) would experience pairing confusion, display incorrect names, or fail to reconnect.
+* **Instant Re-synchronization:** When the scanner is powered back on, it automatically scans and captures active advertisement packets (typically within one second) to update its UI state immediately without requiring any handshake or state negotiation.
 
