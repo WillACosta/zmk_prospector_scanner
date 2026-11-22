@@ -52,3 +52,41 @@ For detailed explanations of specific behaviors and configurations, refer to the
 
 * [docs/MULTI_KEYBOARD_RULES.md](./docs/MULTI_KEYBOARD_RULES.md) – Covers multiple keyboard tracking, sticky selection, and timeout parameters.
 * [docs/KEYBOARD_NAME_BEHAVIOR.md](./docs/KEYBOARD_NAME_BEHAVIOR.md) – Explains how configuring the status advertisement name affects BLE host device names.
+
+## ThinkPad BLE bridge
+
+Use the experimental Corne and Prospector firmware together. The Corne's left
+half runs the keymap and keeps the right half connected. The Prospector forwards
+the Corne's keyboard, media, and pointer reports to its USB host while continuing
+to scan and display keyboard status.
+
+The Prospector builds are `prospector_ble_bridge` (display only) and
+`prospector_ble_bridge_touch` (touch enabled). Plug the Prospector into the
+ThinkPad with a USB data cable, then select the ThinkPad binding on the Corne's
+device layer. The binding uses ZMK BLE profile 2, the third slot. Start with that
+slot free. An unbonded Prospector accepts the advertised `Bs Corne` bridge
+profile during the first minute after boot. Keep other Corne bridge builds
+powered off during this first pairing. The receiver then reconnects only to its
+stored BLE bond. The ThinkPad sees a USB HID device.
+
+Use the Corne's USB output binding to type through a cable directly from the
+left half. For direct Bluetooth, choose another saved profile and use the BLE
+output binding. If one side's bond was cleared, clear the Corne's bridge slot
+with `BT_CLR` and flash `prospector_settings_reset` on the Prospector, then
+reflash the bridge firmware. The Prospector reset clears its saved settings.
+
+### Branch changes awaiting publication
+
+The [module patch](patches/ble-hid-bridge/prospector-zmk-module.patch) and
+[build configuration patch](patches/ble-hid-bridge/zmk-config-prospector.patch)
+apply to this checkout's pinned submodule commits. The feature branches are
+named `feat/ble-hid-bridge` in each repository. Apply and publish the module
+patch first. Then apply and publish the build configuration patch and the
+Corne branch. Both build configurations fetch the module's feature branch
+through West. After the submodule commits are published, record their new
+gitlinks here.
+
+For hardware acceptance, try both halves, a multi-key chord, media keys,
+pointer movement and scrolling, disconnecting with a key held, reconnecting
+after reboot, and switching among the receiver, a direct Bluetooth host, and
+wired USB. Check that the Prospector display continues to update while typing.
