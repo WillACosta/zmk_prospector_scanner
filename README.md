@@ -75,16 +75,10 @@ output binding. If one side's bond was cleared, clear the Corne's bridge slot
 with `BT_CLR` and flash `prospector_settings_reset` on the Prospector, then
 reflash the bridge firmware. The Prospector reset clears its saved settings.
 
-### Branch changes awaiting publication
-
-The [module patch](patches/ble-hid-bridge/prospector-zmk-module.patch) and
-[build configuration patch](patches/ble-hid-bridge/zmk-config-prospector.patch)
-apply to this checkout's pinned submodule commits. The feature branches are
-named `feat/ble-hid-bridge` in each repository. Apply and publish the module
-patch first. Then apply and publish the build configuration patch and the
-Corne branch. Both build configurations fetch the module's feature branch
-through West. After the submodule commits are published, record their new
-gitlinks here.
+This branch pins the Prospector module and build configuration as Git
+submodules. Run `git submodule update --init --recursive` after switching to
+this branch. The build configuration's West manifest pins the same module
+commit as this workspace.
 
 For hardware acceptance, try both halves, a multi-key chord, media keys,
 pointer movement and scrolling, disconnecting with a key held, reconnecting
